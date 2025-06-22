@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
@@ -19,7 +18,7 @@ const Portfolio = () => {
       tech: ["Python", "Machine Learning", "IoT", "Data Analytics", "Flask"],
       github: "https://github.com/Pratham-Chavan18",
       live: "#",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=600&h=400"
+      image: "https://health-e.in/blog/wp-content/uploads/2023/03/benefits-of-health-id-card.jpg"
     },
     {
       title: "JARVIS - Personal AI Assistant",
