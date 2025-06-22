@@ -18,7 +18,7 @@ const Portfolio = () => {
       tech: ["Python", "Machine Learning", "IoT", "Data Analytics", "Flask"],
       github: "https://github.com/Pratham-Chavan18",
       live: "#",
-      image: "https://health-e.in/blog/wp-content/uploads/2023/03/benefits-of-health-id-card.jpg"
+      image: "/lovable-uploads/0620a32f-cd3b-43ae-abec-ac1d1e613689.png"
     },
     {
       title: "JARVIS - Personal AI Assistant",
