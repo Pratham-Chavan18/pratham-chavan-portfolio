@@ -1,57 +1,50 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Award, Calendar, Building2, Users } from 'lucide-react';
 
 const Certificates = () => {
-  const certificates = {
-    technical: [
-      {
-        title: "Basics of Cloud Computing | Fundamentals of Cloud Computing",
-        organization: "Udemy",
-        date: "May 22, 2025",
-        duration: "4 total hours",
-        image: "/lovable-uploads/3c1d2c29-bb51-4845-a636-b38527a3ac82.png",
-        type: "Course Completion"
-      },
-      {
-        title: "Fundamentals of Docker & Kubernetes",
-        organization: "Scaler Masterclass",
-        date: "1st April 2025",
-        instructors: ["Anshuman Singh", "Abhimanyu Saxena"],
-        image: "/lovable-uploads/814aebd5-8784-4af0-bf71-b9c4f682ff6e.png",
-        type: "Masterclass"
-      },
-      {
-        title: "Software Engineering Job Simulation",
-        organization: "JPMorgan Chase & Co. (via Forage)",
-        date: "January 23rd, 2025",
-        skills: ["Project Setup", "Kafka Integration", "H2 Integration", "REST API Integration", "REST API Controller"],
-        image: "/lovable-uploads/ddb7bf5f-20f9-42d4-9ca4-101ea285e749.png",
-        type: "Job Simulation"
-      }
-    ],
-    workshops: [
-      {
-        title: "GAME UI Workshop",
-        organization: "UXRIT CLUB - Ramaiah Institute of Technology",
-        date: "13th May",
-        type: "Workshop Participation",
-        image: "/lovable-uploads/ae73d665-f10b-4e19-8e5c-87a445be4045.png",
-        supervisors: ["DR. SINI ANNA ALEX", "DR. SIDESH GM"]
-      }
-    ],
-    internships: [
-      {
-        title: "Artificial Intelligence and Data Science",
-        organization: "Inventeron Technologies and Business Solutions LLP",
-        duration: "02 Sep 2024 to 01 Oct 2024",
-        regNo: "AAB9565",
-        image: "/lovable-uploads/45f1b115-5d7a-40de-b992-0d6dd2585b79.png",
-        type: "Internship"
-      }
-    ]
-  };
+  const allCertificates = [
+    {
+      title: "Basics of Cloud Computing | Fundamentals of Cloud Computing",
+      organization: "Udemy",
+      date: "May 22, 2025",
+      duration: "4 total hours",
+      image: "/lovable-uploads/3c1d2c29-bb51-4845-a636-b38527a3ac82.png",
+      type: "Course Completion"
+    },
+    {
+      title: "Fundamentals of Docker & Kubernetes",
+      organization: "Scaler Masterclass",
+      date: "1st April 2025",
+      instructors: ["Anshuman Singh", "Abhimanyu Saxena"],
+      image: "/lovable-uploads/814aebd5-8784-4af0-bf71-b9c4f682ff6e.png",
+      type: "Masterclass"
+    },
+    {
+      title: "Software Engineering Job Simulation",
+      organization: "JPMorgan Chase & Co. (via Forage)",
+      date: "January 23rd, 2025",
+      skills: ["Project Setup", "Kafka Integration", "H2 Integration", "REST API Integration", "REST API Controller"],
+      image: "/lovable-uploads/ddb7bf5f-20f9-42d4-9ca4-101ea285e749.png",
+      type: "Job Simulation"
+    },
+    {
+      title: "GAME UI Workshop",
+      organization: "UXRIT CLUB - Ramaiah Institute of Technology",
+      date: "13th May",
+      type: "Workshop Participation",
+      image: "/lovable-uploads/ae73d665-f10b-4e19-8e5c-87a445be4045.png",
+      supervisors: ["DR. SINI ANNA ALEX", "DR. SIDESH GM"]
+    },
+    {
+      title: "Artificial Intelligence and Data Science",
+      organization: "Inventeron Technologies and Business Solutions LLP",
+      duration: "02 Sep 2024 to 01 Oct 2024",
+      regNo: "AAB9565",
+      image: "/lovable-uploads/45f1b115-5d7a-40de-b992-0d6dd2585b79.png",
+      type: "Internship"
+    }
+  ];
 
   const renderCertificate = (cert: any, index: number) => (
     <Card key={index} className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -138,31 +131,9 @@ const Certificates = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="technical" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="technical">Technical Courses</TabsTrigger>
-            <TabsTrigger value="workshops">Workshops</TabsTrigger>
-            <TabsTrigger value="internships">Internships</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="technical" className="mt-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {certificates.technical.map((cert, index) => renderCertificate(cert, index))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="workshops" className="mt-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {certificates.workshops.map((cert, index) => renderCertificate(cert, index))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="internships" className="mt-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {certificates.internships.map((cert, index) => renderCertificate(cert, index))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allCertificates.map((cert, index) => renderCertificate(cert, index))}
+        </div>
       </div>
     </section>
   );
