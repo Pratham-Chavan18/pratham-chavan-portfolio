@@ -11,7 +11,7 @@ const About = () => {
     },
     {
       degree: "Diploma",
-      field: "Engineering",
+      field: "",
       institution: "JSS Polytechnic",
       year: "2023",
     },
@@ -70,7 +70,7 @@ const About = () => {
                 <Card key={index} className="bg-card border-border hover:border-primary/50 transition-colors duration-200">
                   <CardContent className="p-6">
                     <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                    <p className="text-primary font-medium">{edu.field}</p>
+                    {edu.field && <p className="text-primary font-medium">{edu.field}</p>}
                     <p className="text-muted-foreground">{edu.institution}</p>
                     <p className="text-sm text-muted-foreground mt-2">{edu.year}</p>
                   </CardContent>
