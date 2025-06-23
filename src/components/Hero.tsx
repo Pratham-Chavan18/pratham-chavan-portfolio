@@ -80,22 +80,6 @@ const Hero = () => {
             </p>
           </div>
           
-          {/* Enhanced Stats Cards */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 max-w-md mx-auto">
-            <div className="bg-card/40 backdrop-blur-sm border border-border/20 rounded-xl p-4 flex-1">
-              <div className="text-2xl font-bold text-primary">15+</div>
-              <div className="text-sm text-muted-foreground">Projects</div>
-            </div>
-            <div className="bg-card/40 backdrop-blur-sm border border-border/20 rounded-xl p-4 flex-1">
-              <div className="text-2xl font-bold text-primary">3+</div>
-              <div className="text-sm text-muted-foreground">Years Learning</div>
-            </div>
-            <div className="bg-card/40 backdrop-blur-sm border border-border/20 rounded-xl p-4 flex-1">
-              <div className="text-2xl font-bold text-primary">100%</div>
-              <div className="text-sm text-muted-foreground">Dedication</div>
-            </div>
-          </div>
-          
           {/* Enhanced Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
