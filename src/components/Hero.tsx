@@ -9,6 +9,24 @@ const Hero = () => {
     { icon: Zap, position: 'bottom-32 left-20', delay: '2s' },
   ];
 
+  const socialLinks = [
+    {
+      icon: Github,
+      name: "GitHub",
+      href: "https://github.com/Pratham-Chavan18"
+    },
+    {
+      icon: Linkedin,
+      name: "LinkedIn", 
+      href: "https://www.linkedin.com/in/pratham-chavan-1b6b83334"
+    },
+    {
+      icon: Mail,
+      name: "Email",
+      href: "mailto:pratham1611c@gmail.com"
+    }
+  ];
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced Background */}
@@ -99,30 +117,25 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Enhanced Social Links */}
-          <div className="flex justify-center space-x-4">
-            <a 
-              href="https://github.com/Pratham-Chavan18" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group p-4 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/20 hover:bg-card/60 hover:border-primary/20 transition-all duration-300 hover:scale-110"
-            >
-              <Github className="h-6 w-6 group-hover:text-primary transition-colors duration-200" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/pratham-chavan-1b6b83334" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group p-4 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/20 hover:bg-card/60 hover:border-primary/20 transition-all duration-300 hover:scale-110"
-            >
-              <Linkedin className="h-6 w-6 group-hover:text-primary transition-colors duration-200" />
-            </a>
-            <a 
-              href="mailto:pratham1611c@gmail.com"
-              className="group p-4 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/20 hover:bg-card/60 hover:border-primary/20 transition-all duration-300 hover:scale-110"
-            >
-              <Mail className="h-6 w-6 group-hover:text-primary transition-colors duration-200" />
-            </a>
+          {/* Enhanced Social Links with Names */}
+          <div>
+            <h3 className="text-lg font-medium text-muted-foreground mb-6">Connect with me</h3>
+            <div className="flex justify-center space-x-8">
+              {socialLinks.map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center p-4 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/20 hover:bg-card/60 hover:border-primary/20 transition-all duration-300 hover:scale-110"
+                >
+                  <social.icon className="h-6 w-6 group-hover:text-primary transition-colors duration-200 mb-2" />
+                  <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors duration-200">
+                    {social.name}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
