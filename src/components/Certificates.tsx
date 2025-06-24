@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Calendar, Building2, Users } from 'lucide-react';
+import { Award, Calendar, Users } from 'lucide-react';
 
 const Certificates = () => {
   const allCertificates = [
@@ -64,11 +64,6 @@ const Certificates = () => {
         <h3 className="text-xl font-semibold mb-3 line-clamp-2">{cert.title}</h3>
         
         <div className="space-y-2 mb-4">
-          <div className="flex items-center text-muted-foreground">
-            <Building2 className="h-4 w-4 mr-2" />
-            <span className="text-sm">{cert.organization}</span>
-          </div>
-          
           <div className="flex items-center text-muted-foreground">
             <Calendar className="h-4 w-4 mr-2" />
             <span className="text-sm">{cert.date || cert.duration}</span>
