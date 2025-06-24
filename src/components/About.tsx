@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { GraduationCap, Briefcase } from 'lucide-react';
 
@@ -5,9 +6,9 @@ const About = () => {
   const education = [
     {
       degree: "Bachelor of Engineering",
-      field: "Computer Science",
+      field: "Computer Science Engineering",
       institution: "M.S Ramaiah Institute of Technology",
-      year: "2026 (Expected)",
+      year: "2026",
     },
     {
       degree: "Diploma",
