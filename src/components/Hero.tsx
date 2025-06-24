@@ -1,4 +1,3 @@
-
 import { ArrowRight, Github, Linkedin, Mail, Code2, Palette, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -19,6 +18,11 @@ const Hero = () => {
       icon: Linkedin,
       name: "LinkedIn", 
       href: "https://www.linkedin.com/in/pratham-chavan-1b6b83334"
+    },
+    {
+      icon: Code2,
+      name: "LeetCode",
+      href: "https://leetcode.com/u/Pratham-Chavan/"
     },
     {
       icon: Mail,
