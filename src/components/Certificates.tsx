@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Calendar, Users } from 'lucide-react';
+import { Award, Calendar } from 'lucide-react';
 
 const Certificates = () => {
   const allCertificates = [
@@ -16,7 +16,6 @@ const Certificates = () => {
       title: "Fundamentals of Docker & Kubernetes",
       organization: "Scaler Masterclass",
       date: "1st April 2025",
-      instructors: ["Anshuman Singh", "Abhimanyu Saxena"],
       image: "/lovable-uploads/814aebd5-8784-4af0-bf71-b9c4f682ff6e.png",
       type: "Masterclass"
     },
@@ -33,8 +32,7 @@ const Certificates = () => {
       organization: "UXRIT CLUB - Ramaiah Institute of Technology",
       date: "13th May",
       type: "Workshop Participation",
-      image: "/lovable-uploads/ae73d665-f10b-4e19-8e5c-87a445be4045.png",
-      supervisors: ["DR. SINI ANNA ALEX", "DR. SIDESH GM"]
+      image: "/lovable-uploads/ae73d665-f10b-4e19-8e5c-87a445be4045.png"
     },
     {
       title: "Artificial Intelligence and Data Science",
@@ -73,20 +71,6 @@ const Certificates = () => {
             <div className="flex items-center text-muted-foreground">
               <Award className="h-4 w-4 mr-2" />
               <span className="text-sm">{cert.duration}</span>
-            </div>
-          )}
-          
-          {cert.instructors && (
-            <div className="flex items-center text-muted-foreground">
-              <Users className="h-4 w-4 mr-2" />
-              <span className="text-sm">{cert.instructors.join(", ")}</span>
-            </div>
-          )}
-          
-          {cert.supervisors && (
-            <div className="flex items-center text-muted-foreground">
-              <Users className="h-4 w-4 mr-2" />
-              <span className="text-sm">Supervisors: {cert.supervisors.join(", ")}</span>
             </div>
           )}
           
